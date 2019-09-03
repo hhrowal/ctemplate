@@ -22,5 +22,8 @@ LOCAL_C_INCLUDES := $(src_dir)/../build-android/include $(src_dir) \
   # $(ANDROID_NDK)/sources/cxx-stl/llvm-libc++/include
 LOCAL_MODULE := ctemplate
 LOCAL_SRC_FILES := $(addprefix $(src_dir)/, $(src_files))
+LOCAL_CFLAGS := -fPIC
+LOCAL_CXXFLAGS := -fPIC
+LOCAL_CPPFLAGS := -fPIC
 
 include $(BUILD_STATIC_LIBRARY)
